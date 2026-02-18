@@ -1,8 +1,7 @@
 function Products({ view }) {
 
   const products = [
-    { id: 1, name: "iPhone 15", price: 80000, image: "https://images.unsplash.com/photo-1703434123142-1b41a1b1055b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8aXBob25lJTIwMTV8ZW58MHx8MHx8fDA%3D", description: "Latest Apple smartphone",discount: "20% OFF",
-    features: ["128GB Storage", "48MP Camera", "A16 Chip"] },
+    { id: 1, name: "iPhone 15", price: 80000, image: "https://images.unsplash.com/photo-1703434123142-1b41a1b1055b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8aXBob25lJTIwMTV8ZW58MHx8MHx8fDA%3D", description: "Latest Apple smartphone",discount: "20% OFF", },
     { id: 2, name: "Samsung Galaxy S24", price: 75000, image: "https://images.unsplash.com/photo-1706372124814-417e2f0c3fe0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2Ftc3VuZyUyMHMyNHxlbnwwfHwwfHx8MA%3D%3D", description: "Flagship Samsung phone",discount: "30% OFF", },
     { id: 3, name: "OnePlus 12", price: 65000, image: "https://images.unsplash.com/photo-1637190909375-85cd40d14161?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8b25lcGx1cyUyMDEyJTIwbW9iaWxlfGVufDB8fDB8fHww", description: "Fast performance mobile",discount: "40% OFF", },
     { id: 4, name: "Laptop", price: 60000, image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3DcJHrrHSgvFpsYxqb6g97uaQTd2kE31rPUeDZTeDsjVq", description: "High performance laptop",discount: "25% OFF", },
@@ -20,26 +19,15 @@ function Products({ view }) {
         <div key={item.id} className="product-card">
           <img src={item.image} alt={item.name} />
             <div className="product-info">
-            {/* discount irundha mattum show agum */}
-            {item.discount && (
-            <span className="discount">{item.discount}</span>
+              {/* discount irundha mattum show agum */}
+              {item.discount && (
+              <span className="discount">{item.discount}</span>
             )}
-            <h3>{item.name}</h3>
-            <p>{item.description}</p>
-            <p>₹{item.price}</p>
-
-    {/* features irundha mattum show agum */}
-    {/* {item.features && (
-        <ul className="features">
-        {item.features.map((feature, index) => (
-            <li key={index}>{feature}</li>
-        ))}
-        </ul>
-    )} */}
-
-    <span className="wishlist">♡</span>
-
-    </div>
+              <h3>{item.name}</h3>
+              <p>{item.description}</p>
+              <p>₹{item.price}</p>
+              <span className="wishlist">♡</span>
+        </div>
 
         </div>
       ))}
